@@ -1,9 +1,12 @@
-<!--pages/createVote/createVote.wxml-->
+<!-- pages/createVote/createVote.wxml -->
 <view>
   <scroll-view class="content">
     <form>
       <input type="text" placeholder="请输入标题" class="inputBox"></input>
-      <input></input>
+      <view class="optionView">
+        <input type="text" placeholder="请输入选项" class="inputBox"></input>
+        <input type="text" placeholder="请输入选项" class="inputBox" />
+      </view>
       <button id="post">提交</button>
     </form>
   </scroll-view>

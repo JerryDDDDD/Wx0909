@@ -9,5 +9,9 @@ view {
   border-bottom: 1px solid black;
   /* text-decoration: underline; */
   height: 50rpx;
+}
 
+.optionView {
+  border: 1px solid gray;
+  margin-top: 30rpx;
 }
