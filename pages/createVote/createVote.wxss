@@ -1,0 +1,13 @@
+/* pages/createVote/createVote.wxss */
+view {
+  width: 96%;
+  margin-left: 2%;
+}
+
+.inputBox {
+  /* border: 1px solid #008001; */
+  border-bottom: 1px solid black;
+  /* text-decoration: underline; */
+  height: 50rpx;
+
+}

@@ -1,0 +1,34 @@
+{
+  "pages": [
+    "pages/vote/vote",
+    "pages/my/my",
+    "pages/createVote/createVote",
+    "pages/joinVote/joinVote"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "投票小程序",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/vote/vote",
+        "text": "投票",
+        "iconPath": "images/vote.png",
+        "selectedIconPath": "images/voteSelected.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/my.png",
+        "selectedIconPath": "images/mySelected.png"
+      }
+    ],
+    "color": "#bfbfbf",
+    "borderStyle": "black",
+    "selectedColor": "#1AAD19"
+  }
+}

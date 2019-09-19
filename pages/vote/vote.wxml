@@ -1,0 +1,12 @@
+<!--pages/vote/vote.wxml-->
+<view>
+  <view id="title">
+    <text>小投票</text>
+  </view>
+  <view class="topView" bindtap="tapCreateVote">
+    <text class="boxText">发起投票</text>
+  </view>
+  <view class="underView">
+    <text class="boxText" bindtap="tapJoinVote">参加投票</text>
+  </view>
+</view>

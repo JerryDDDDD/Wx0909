@@ -1,0 +1,37 @@
+/* pages/vote/vote.wxss */
+#title {
+  /*display: flex;
+  flex-direction: column;
+  align-items: center;*/
+  text-align:center;
+}
+
+.topView {
+  width: 70%;
+  height: 400rpx;
+  margin-left: 15%;
+  margin-top: 5%;
+  border: 1px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 100rpx;
+}
+
+.underView {
+  width: 70%;
+  height: 400rpx;
+  margin-left: 15%;
+  margin-top: 100rpx;
+  border: 1px solid saddlebrown;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 100rpx;
+}
+
+.boxText {
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+}
