@@ -4,7 +4,7 @@
     <form>
       <input type="text" placeholder="请输入标题" class="inputBox"></input>
       <input></input>
-      <button id="post">提交</button>
+      <button id="post">提交一下啊</button>
     </form>
   </scroll-view>
 </view>
