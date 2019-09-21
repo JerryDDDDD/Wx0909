@@ -6,11 +6,9 @@ Page({
    */
   data: {
     optionList: [{
-
+      option: ""
     }, {
-
-    }, {
-
+      option: ""
     }]
   },
 
@@ -73,15 +71,30 @@ Page({
   /**
    * 删除选项
    */
-  removeOption: function () {
-    this.optionList.removeOption()
+  removeOption: function (e) {
+    console.log(e.currentTarget.dataset.index);
+    var touchIndex = e.currentTarget.dataset.index;
+    this.data.optionList.splice(touchIndex, 1);
+    this.setData({
+      optionList: this.data.optionList
+    });
+    console.log(this.data.optionList);
   },
 
   /**
    * 增加选项
    */
   addOption: function () {
-    var data = {};
+    var data = null;
     this.setData({ optionList: this.data.optionList.concat(data) })
+  },
+
+  /**
+   * 输入出发
+   */
+  inputChange: function (e) {
+    var changeIdnex = e.currentTarget.dataset.index;
+    console.log(e.detail.value);
+    this.data.optionList[changeIdnex] = { option: e.detail.value };
   }
 })
