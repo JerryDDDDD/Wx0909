@@ -1,3 +1,5 @@
+var data = require('../../common/js/data')
+
 // pages/my/my.js
 Page({
 
@@ -62,5 +64,32 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  /**
+   * 登录
+   */
+  doLogin: function () {
+    console.log(data.DATA.ServerBaseUrl);
+    wx.login({
+      success: function (res) {
+        console.log(res.code);
+        if (res.code) {
+          wx.request({
+            url: data.DATA.ServerBaseUrl + data.DATA.DoLoginUrl,
+            data: { "code": res.code },
+            header: { 'content-type': 'application/json' },
+            method: 'GET',
+            dataType: 'json',
+            responseType: 'text',
+            success: (result) => {
+
+            },
+            fail: () => { },
+            complete: () => { }
+          });
+        }
+      }
+    });
   }
 })

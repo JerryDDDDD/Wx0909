@@ -1,8 +1,8 @@
 {
   "pages": [
+    "pages/my/my",
     "pages/createVote/createVote",
     "pages/vote/vote",
-    "pages/my/my",
     "pages/joinVote/joinVote"
   ],
   "window": {

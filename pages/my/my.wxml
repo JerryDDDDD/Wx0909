@@ -1,18 +1,13 @@
-<!--pages/my/my.wxml-->
+<!-- pages/my/my.wxml -->
 <view class="user-container bg-white">
-    
     <view class="userinfo">
-        
         <block wx:if="{{!hasLogin}}">
-            <image class="userinfo-avatar" src="../../images/login.png" background-size="cover" catchtap="doLogin"></image>
+            <image class="userinfo-avatar" src="../../images/login.png" background-size="cover" bind:tap="doLogin"></image>
             <text class="userinfo-nickname">点击登录</text>
         </block>
-        
         <block wx:else>
             <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
             <text class="userinfo-nickname">{{userInfo.nickName}}</text>
         </block>
-
     </view>
-
 </view>
