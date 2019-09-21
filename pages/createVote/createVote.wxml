@@ -2,12 +2,17 @@
 <view>
   <scroll-view class="content">
     <form>
-      <input type="text" placeholder="请输入标题" class="inputBox"></input>
-      <view class="optionView">
-        <input type="text" placeholder="请输入选项" class="inputBox"></input>
-        <input type="text" placeholder="请输入选项" class="inputBox" />
+      <view>
+        <input type="text" placeholder="请输入标题" class="inputBox"></input>
       </view>
-      <button id="post">提交</button>
+      <view class="optionView" wx:for="{{optionList}}">
+        <view class="iconfont icon-minus-circle-fill inputBox-icon" bind:tap="removeOption"></view>
+        <input type="text" placeholder="请输入选项" class="inputBox-option" value="{{item.id}}"></input>
+      </view>
+      <view class="iconfont icon-plus add-option" bind:tap="addOption">
+        <text>增加一项</text>
+      </view>
+      <button id="post" type="primary">发起投票</button>
     </form>
   </scroll-view>
 </view>

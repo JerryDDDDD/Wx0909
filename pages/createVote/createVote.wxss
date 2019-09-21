@@ -1,7 +1,11 @@
+@import "../../common/css/iconfont.wxss";
 /* pages/createVote/createVote.wxss */
+
 view {
   width: 96%;
   margin-left: 2%;
+  align-content: center;
+  margin: 20rpx;
 }
 
 .inputBox {
@@ -11,7 +15,35 @@ view {
   height: 50rpx;
 }
 
+.inputBox-option {
+  /* border: 1px solid #008001; */
+  border-bottom: 1px solid black;
+  /* text-decoration: underline; */
+  width: 92%;
+  height: 50rpx;
+  float: right;
+}
+
+.inputBox-icon {
+  width: 2%;
+  float: left;
+}
+
+.add-input-icon {
+  height: 50rpx;
+  width: 10%;
+}
+
 .optionView {
-  border: 1px solid gray;
   margin-top: 30rpx;
 }
+
+.add-option {
+  margin-left: 2%;
+}
+
+button {
+  margin-top: 30rpx;
+  width: 96%;
+}
+

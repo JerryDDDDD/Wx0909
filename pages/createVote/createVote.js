@@ -5,7 +5,13 @@ Page({
    * 页面的初始数据
    */
   data: {
+    optionList: [{
 
+    }, {
+
+    }, {
+
+    }]
   },
 
   /**
@@ -62,5 +68,20 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  /**
+   * 删除选项
+   */
+  removeOption: function () {
+    this.optionList.removeOption()
+  },
+
+  /**
+   * 增加选项
+   */
+  addOption: function () {
+    var data = {};
+    this.setData({ optionList: this.data.optionList.concat(data) })
   }
 })
