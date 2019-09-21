@@ -1,18 +1,18 @@
 <!-- pages/createVote/createVote.wxml -->
 <view>
   <scroll-view class="content">
-    <form>
+    <form bindsubmit="createVote">
       <view>
         <input type="text" placeholder="请输入标题" class="inputBox"></input>
       </view>
       <view class="optionView" wx:for="{{optionList}}" wx:key="{{item}}">
         <view class="iconfont icon-minus-circle-fill inputBox-icon" bind:tap="removeOption" data-index="{{index}}"></view>
-        <input type="text" class="inputBox-option" value="{{item.option}}" bindinput="inputChange" data-index="{{index}}" placeholder="请输入选项..."></input>
+        <input type="text" class="inputBox-option" value="{{item}}" bindinput="inputChange" data-index="{{index}}" placeholder="请输入选项..."></input>
       </view>
       <view class="iconfont icon-plus add-option" bind:tap="addOption">
         <text>增加一项</text>
       </view>
-      <button id="post" type="primary">发起投票</button>
+      <button id="post" type="primary" form-type="submit">发起投票</button>
     </form>
   </scroll-view>
 </view>

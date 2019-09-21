@@ -5,11 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    optionList: [{
-      option: ""
-    }, {
-      option: ""
-    }]
+    optionList: [null, null]
   },
 
   /**
@@ -85,8 +81,10 @@ Page({
    * 增加选项
    */
   addOption: function () {
-    var data = null;
-    this.setData({ optionList: this.data.optionList.concat(data) })
+    this.setData({
+      optionList: this.data.optionList.concat([null])
+    });
+    console.log(this.data.optionList);
   },
 
   /**
@@ -95,6 +93,14 @@ Page({
   inputChange: function (e) {
     var changeIdnex = e.currentTarget.dataset.index;
     console.log(e.detail.value);
-    this.data.optionList[changeIdnex] = { option: e.detail.value };
+    this.data.optionList[changeIdnex] = e.detail.value;
+  },
+
+  /**
+   * 发起投票
+   */
+  createVote: function (e) {
+    console.log("log");
+    console.log(this.data.optionList);
   }
 })
