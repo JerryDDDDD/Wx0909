@@ -3,7 +3,7 @@
   <scroll-view class="content">
     <form bindsubmit="createVote" bindreset="resetVote">
       <view>
-        <input type="text" placeholder="请输入标题" class="inputBox"></input>
+        <input type="text" placeholder="请输入标题" class="inputBox" name="title"></input>
       </view>
       <view class="optionView" wx:for="{{optionList}}" wx:key="{{item}}">
         <view class="iconfont icon-minus-circle-fill inputBox-icon" bind:tap="removeOption" data-index="{{index}}"></view>

@@ -102,7 +102,7 @@ Page({
   createVote: function (e) {
     console.log("log");
     console.log(this.data.optionList);
-    console.log(e.detail.value);
+    console.log(e.detail.value.title);
   },
 
   /**
