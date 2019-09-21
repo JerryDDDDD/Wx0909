@@ -1,7 +1,7 @@
 <!-- pages/createVote/createVote.wxml -->
 <view>
   <scroll-view class="content">
-    <form bindsubmit="createVote">
+    <form bindsubmit="createVote" bindreset="resetVote">
       <view>
         <input type="text" placeholder="请输入标题" class="inputBox"></input>
       </view>
@@ -13,6 +13,7 @@
         <text>增加一项</text>
       </view>
       <button id="post" type="primary" form-type="submit">发起投票</button>
+      <button id="reset" form-type="reset" type="default">重置选项</button>
     </form>
   </scroll-view>
 </view>

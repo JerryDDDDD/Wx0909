@@ -102,5 +102,15 @@ Page({
   createVote: function (e) {
     console.log("log");
     console.log(this.data.optionList);
+    console.log(e.detail.value);
+  },
+
+  /**
+   * 重置投票 
+   */
+  resetVote: function (e) {
+    this.setData({
+      optionList: [null, null]
+    });
   }
 })
