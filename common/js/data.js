@@ -1,7 +1,21 @@
-var DATA = {
-    ServerBaseUrl: "http://127.0.0.1:10100",
+var Data = {
+  // 请求方式
+  requestType: {
+    // Get
+    GET: "GET",
+    // POST
+    POST: "POST",
+  },
 
-    DoLoginUrl: "/user/doLogin.json"
+  // 请求地址
+  requestUrl: {
+    baseUrl: "http://127.0.0.1:30100",
+    testUrl: "/test/hello.json",
+
+    loginUrl: "/user/doLogin.json"
+  }
 }
 
-module.exports.DATA = DATA
+module.exports = {
+  Data: Data
+}
