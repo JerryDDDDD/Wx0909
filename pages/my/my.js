@@ -7,14 +7,29 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    userHeadPic: "../../images/login.png",
+    userName: "点击登录"
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    wx.getUserInfo({
+      withCredentials: 'false',
+      lang: 'zh_CN',
+      timeout: 10000,
+      success: (result) => {
+        console.log(result);
+        console.log(result.userInfo.nickName);
+        this.setData({
+          userHeadPic: result.userInfo.avatarUrl,
+          userName: result.userInfo.nickName
+        })
+      },
+      fail: () => { },
+      complete: () => { }
+    });
   },
 
   /**
