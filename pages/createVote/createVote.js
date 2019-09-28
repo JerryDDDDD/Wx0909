@@ -1,3 +1,6 @@
+var api = require("./api.js")
+var req = require("../../common/js/request.js")
+var data = require("../../common/js/data.js")
 // pages/createVote/createVote.js
 Page({
 
@@ -92,7 +95,6 @@ Page({
    */
   inputChange: function (e) {
     var changeIdnex = e.currentTarget.dataset.index;
-    console.log(e.detail.value);
     this.data.optionList[changeIdnex] = e.detail.value;
   },
 
@@ -100,9 +102,14 @@ Page({
    * 发起投票
    */
   createVote: function (e) {
-    console.log("log");
-    console.log(this.data.optionList);
-    console.log(e.detail.value.title);
+    var createVote = api.Api.createVoteParam(e.detail.value.title, "测试", this.data.optionList);
+    api.Api.createVote(createVote).then(res => {
+      if (res.data.code == data.Data.statusCode.OK) {
+        console.log("发起成功" + res.data.data);
+      }
+    }, res => {
+      console.log("发起失败");
+    });
   },
 
   /**

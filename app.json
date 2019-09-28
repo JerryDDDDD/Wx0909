@@ -3,7 +3,8 @@
     "pages/my/my",
     "pages/createVote/createVote",
     "pages/vote/vote",
-    "pages/joinVote/joinVote"
+    "pages/joinVote/joinVote",
+    "pages/voteDetail"
   ],
   "window": {
     "backgroundTextStyle": "light",

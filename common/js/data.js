@@ -7,12 +7,26 @@ var Data = {
     POST: "POST",
   },
 
+  /**
+   * 状态码
+   */
+  statusCode: {
+    //成功
+    OK: 200,
+    //正常失败
+    ERROR: 201,
+    // token过期
+    TOKEN_EXPRISE: 202
+  },
+
   // 请求地址
   requestUrl: {
     baseUrl: "http://127.0.0.1:30100",
     testUrl: "/test/hello.json",
 
-    loginUrl: "/user/doLogin.json"
+    loginUrl: "/user/doLogin.json",
+    createVoteUrl: "/vote/create.json"
+
   }
 }
 
