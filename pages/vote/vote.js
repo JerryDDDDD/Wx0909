@@ -20,7 +20,7 @@ Page({
   /**
    * 參加投票
    */
-  tapJoinVote: function() {
+  tapJoinVote: function () {
     wx.navigateTo({
       url: '../joinVote/joinVote'
     })
@@ -29,12 +29,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.connectSocket({
-      url: 'ws://192.168.1.36:10009/ws',
-    });
-    wx.onSocketOpen(function() {
-      console.log("socket connect");
-    })
+
   },
 
   /**

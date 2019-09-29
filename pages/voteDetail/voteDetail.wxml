@@ -1,0 +1,12 @@
+<!-- pages/voteDetail/voteDetail.wxml -->
+<view>
+    <view class="title">
+        <text>{{vote.voteTitle}}</text>
+    </view>
+    <view class="content">
+        <text>{{vote.voteContent}}</text>
+    </view>
+    <view class="option" wx:for="{{vote.voteOption}}" wx:key="{{item}}">
+        <text>{{item}}</text>
+    </view>
+</view>

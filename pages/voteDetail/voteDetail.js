@@ -1,18 +1,38 @@
-// pages/voteDetail.js
+var api = require("./api.js");
+// pages/voteDetail/voteDetail.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    voteNum: null,
+    vote: null
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    console.log(options.voteNum);
+    this.setData({
+      voteNum: options.voteNum
+    });
+    api.Api.getVoteByNum(options.voteNum).then(res => {
+      this.setData({
+        vote: res.data.data
+      });
+    }, res => {
+      console.log("获取失败");
+      console.log(res.data);
+    });
 
+    wx.connectSocket({
+      url: 'ws://192.168.1.36:10009/ws',
+    });
+    wx.onSocketOpen(function () {
+      console.log("socket connect");
+    })
   },
 
   /**

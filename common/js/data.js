@@ -22,10 +22,12 @@ var Data = {
   // 请求地址
   requestUrl: {
     baseUrl: "http://127.0.0.1:30100",
+    jsonEnd: ".json",
     testUrl: "/test/hello.json",
 
     loginUrl: "/user/doLogin.json",
-    createVoteUrl: "/vote/create.json"
+    createVoteUrl: "/vote/create.json",
+    getVoteByNnum: "/vote/getByNum/"
 
   }
 }

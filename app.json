@@ -1,10 +1,11 @@
 {
   "pages": [
     "pages/my/my",
+    "pages/voteDetail/voteDetail",
+   
     "pages/createVote/createVote",
     "pages/vote/vote",
-    "pages/joinVote/joinVote",
-    "pages/voteDetail"
+    "pages/joinVote/joinVote"
   ],
   "window": {
     "backgroundTextStyle": "light",

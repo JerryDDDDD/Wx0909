@@ -15,7 +15,7 @@ var Api = {
 
   createVote: function (createVoteParam) {
     return new Promise(function (reslove, reject) {
-      var param = req.Request.params(data.Data.requestType.POST, data.Data.requestUrl.baseUrl + data.Data.requestUrl.createVoteUrl, createVoteParam);
+      var param = req.Request.params(data.Data.requestType.POST, data.Data.requestUrl.baseUrl + data.Data.requestUrl.createVoteUrl, JSON.stringify(createVoteParam));
       req.Request.myWxRequet(param).then(res => reslove(res), res => reject(res));
     });
   }

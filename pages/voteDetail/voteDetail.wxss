@@ -1,0 +1,32 @@
+/* pages/voteDetail/voteDetail.wxss */
+
+
+
+
+view {
+    /* width: 90%; */
+    /* padding-left: 5%; */
+    background-color: ghostwhite;
+    align-items: center;
+}
+
+.title {
+  font-size: 40rpx;
+  height: 100rpx;  
+}
+
+.content {
+  height: 100rpx;
+  font-size: 35rpx;
+}
+
+.option {
+  height: 100rpx;
+  font-size: 30rpx;
+  background-color: beige;
+}
+
+text {
+  padding: 5%;
+}
+
